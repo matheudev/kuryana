@@ -13,7 +13,7 @@ class Search(BaseSearch):
 
     def __init__(self, soup: BeautifulSoup, query: str, code: int, ok: bool) -> None:
         super().__init__(soup, query, code, ok)
-        self.url = "search?q=" + self.query.replace(" ", "+")
+        self.url = "search?" + self.query.replace(" ", "+")
         self.mdl_container_id = "mdl-"
 
     # get the main html container for the each search results
